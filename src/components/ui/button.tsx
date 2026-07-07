@@ -1,23 +1,23 @@
-interface buttonProps {
-	text: string;
-	type: "primary" | "secondary";
-	onClick?: () => void;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	children: React.ReactNode;
+	variant: "primary" | "secondary";
 }
 
-const defaultButton = ({ text, type, onClick }: buttonProps) => {
+const Button = ({ children, variant, className, type = "button", ...props }: ButtonProps) => {
 	const buttonStyles = {
-		primary: "bg-[var(--accent-yellow)] text-[var(--iron-grey)]",
-		secondary: "border-2 border-[var(--outline-strong)] text-[#f9f8f2]",
+		primary: "bg-[var(--accent-yellow)] text-[var(--iron-grey)] hover:bg-white",
+		secondary: "border-2 border-[var(--outline-strong)] text-[#f9f8f2] hover:bg-[rgba(255,255,255,0.27)]",
 	};
 
 	return (
 		<button
-			className={`inline-flex h-12 items-center justify-center rounded px-7 text-[0.84rem] font-bold uppercase tracking-[0.08em] transition hover:brightness-105 ${buttonStyles[type]}`}
-			onClick={onClick}
+			type={type}
+			className={`inline-flex h-12 items-center justify-center rounded px-7 text-[0.84rem] font-bold uppercase tracking-[0.08em] transition ${buttonStyles[variant]} ${className ?? ""}`}
+			{...props}
 		>
-			{text}
+			{children}
 		</button>
 	);
 }
 
-export default defaultButton;
+export default Button;
