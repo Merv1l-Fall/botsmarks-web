@@ -1,6 +1,5 @@
-import Image from "next/image";
-import Button from "@/components/ui/button";
 import Hero from "@/components/sections/home/hero";
+import InfoCards from "@/components/sections/home/InfoCards";
 
 export default function Home() {
   return (
@@ -8,6 +7,7 @@ export default function Home() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_24%,rgba(180,205,184,0.08),transparent_35%)]" />
 
       <Hero />
+	  <InfoCards />
     </main>
   );
 }

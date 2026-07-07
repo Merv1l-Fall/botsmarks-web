@@ -4,6 +4,7 @@
   --background: #121412;
   --surface-low: #1b1c1a;
   --surface-high: #2e4d36;
+  --surface-higher: #263e2c;
   --foreground: #e3e2e0;
   --foreground-muted: #c3c8c1;
   --outline: #434843;
@@ -37,7 +38,6 @@ html {
     font-family: var(--font-montserrat), sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	padding: 0 16px;
   }
 
   a {
