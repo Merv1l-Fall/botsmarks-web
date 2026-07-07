@@ -1,17 +1,21 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "tailwindcss";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #121412;
+  --surface-low: #1b1c1a;
+  --surface-high: #2e4d36;
+  --foreground: #e3e2e0;
+  --foreground-muted: #c3c8c1;
+  --outline: #434843;
+  --outline-strong: #8d928c;
+  --accent-yellow: #e6b011;
+  --barrier-red: #b23b3b;
+  --iron-grey: #212121;
 }
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -25,8 +29,11 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(108deg, rgba(12, 30, 18, 0.85) 0%, rgba(11, 24, 17, 0.96) 46%, #07130f 100%),
+    radial-gradient(circle at 8% 18%, rgba(180, 205, 184, 0.12), transparent 36%),
+    linear-gradient(180deg, #0f1a14 0%, var(--background) 100%);
+  font-family: var(--font-montserrat), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,8 +49,43 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+::selection {
+  background: rgba(230, 176, 17, 0.28);
+  color: var(--foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.hero-shell {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+@media (min-width: 1024px) {
+  .hero-shell {
+    padding: 72px 64px;
+  }
+}
+
+.reveal-up {
+  animation: reveal-up 0.7s ease-out both;
+}
+
+.reveal-up-delay {
+  animation: reveal-up 0.85s ease-out 0.14s both;
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
