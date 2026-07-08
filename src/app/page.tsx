@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/home/hero";
 import InfoCards from "@/components/sections/home/InfoCards";
+import ProductShowcase from "@/components/sections/home/ProductShowcase";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
 
       <Hero />
 	  <InfoCards />
+	  <ProductShowcase />
     </main>
   );
 }

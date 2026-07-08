@@ -15,7 +15,7 @@ const Card = () => {
 
 const InfoCards = () => {
 	return (
-		<section className="bg-(--iron-grey) py-12">
+		<section className="bg-(--iron-grey) py-12 flex flex-col items-center">
 			<div className="flex flex-col items-center justify-center gap-2">
 				<h2 className="text-(--foreground) text-3xl font-bold text-center">
 					Kvalitet från de Norrländska skogarna
@@ -23,7 +23,7 @@ const InfoCards = () => {
 				<span className="h-[0.2rem] w-32 bg-(--accent-yellow)"/>
 			</div>
 
-			<div className="flex items-evenly gap-6 my-10 mx-6">
+			<div className="flex items-evenly gap-8 my-10 mx-6 max-w-7xl">
 				<Card/>
 				<Card/>
 				<Card/>

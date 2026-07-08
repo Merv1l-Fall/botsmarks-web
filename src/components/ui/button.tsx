@@ -26,11 +26,11 @@ const sharedClasses = (className?: string) =>
 	`inline-flex h-12 items-center justify-center rounded px-7 text-[0.84rem] font-bold uppercase tracking-[0.08em] transition ${className ?? ""}`;
 
 const Button = (props: ButtonProps) => {
-	const { children, variant, className } = props;
+	const { children, variant, className, ...restProps } = props;
 	const classes = `${sharedClasses(className)} ${buttonStyles[variant]}`;
 
-	if ("href" in props) {
-		const { href, ...anchorProps } = props;
+	if ("href" in restProps) {
+		const { href, ...anchorProps } = restProps;
 
 		return (
 			<Link href={href} className={classes} {...anchorProps}>
@@ -39,7 +39,7 @@ const Button = (props: ButtonProps) => {
 		);
 	}
 
-	const { type = "button", ...buttonProps } = props;
+	const { type = "button", ...buttonProps } = restProps;
 
 	return (
 		<button type={type} className={classes} {...buttonProps}>

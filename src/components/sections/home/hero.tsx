@@ -30,7 +30,7 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className="reveal-up-delay relative mx-auto w-full max-w-[680px]">
+			<div className="reveal-up-delay relative mx-auto w-full max-w-170">
 				<div className="relative ml-auto w-full rounded bg-[rgba(255,255,255,0.06)] p-4 ring-1 ring-[rgba(255,255,255,0.12)] backdrop-blur-sm md:p-5">
 					<Image
 						src="/botsmarks_first_page.jpg"
@@ -40,9 +40,9 @@ const Hero = () => {
 						priority
 						className="h-auto w-full rounded object-cover"
 					/>
-					<div className="absolute inset-0 rounded bg-gradient-to-t from-[var(--background)]/60 via-[var(--background)]/20 to-transparent hover:opacity-0 transition-opacity z-10" />
+					<div className="absolute inset-0 rounded bg-linear-to-t from-(--background)/60 via-(--background)/20 to-transparent hover:opacity-0 transition-opacity z-10" />
 
-					<div className="absolute bottom-2 left-2 w-[230px] rounded-r bg-[rgba(10,12,10,0.95)] px-3 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.3)] md:bottom-4 md:left-4">
+					<div className="absolute bottom-2 left-2 w-57.5 rounded-r bg-[rgba(10,12,10,0.95)] px-3 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.3)] md:bottom-4 md:left-4">
 						<span className="block border-l-2 border-(--accent-yellow) pl-2 text-[0.7rem] font-bold uppercase tracking-[0.08em] text-(--accent-yellow)">
 							Alltid
 						</span>

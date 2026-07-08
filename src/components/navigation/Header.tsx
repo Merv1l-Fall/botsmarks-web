@@ -31,7 +31,7 @@ const Header = () => {
 
 	return (
 		<header className="relative z-20 w-full bg-[rgba(8,10,8,0.92)] backdrop-blur-sm">
-			<div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-2 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
+			<div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-2 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
 				<Link
 					href="/"
 					className="inline-flex gap-2 text-[1.05rem] font-extrabold uppercase leading-none tracking-[-0.03em] text-(--foreground)"

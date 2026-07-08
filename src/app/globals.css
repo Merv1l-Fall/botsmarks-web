@@ -52,9 +52,6 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .hero-shell {
-    padding: 72px 64px;
-  }
 }
 
 .reveal-up {
