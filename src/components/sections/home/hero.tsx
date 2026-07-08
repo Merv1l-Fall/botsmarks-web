@@ -11,7 +11,7 @@ const Hero = () => {
 				</div>
 
 				<h1 className="text-balance text-[2rem] font-bold leading-[1.2] tracking-[-0.02em] text-(--foreground) sm:text-[2.35rem] lg:text-[3.05rem]">
-					Vägbommen <em className="font-semibold italic text-[#c8d7c9]">som håller </em>skogen stängd.
+					Vägbommen <em className="font-semibold italic text-[#c8d7c9]">som håller </em>skogen stängd
 				</h1>
 
 				<p className="max-w-lg text-[1rem] leading-[1.65] text-(--foreground-muted) lg:text-[1.05rem]">

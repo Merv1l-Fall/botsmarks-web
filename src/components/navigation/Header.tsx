@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import Logo from "../../../public/Logo"
 import { usePathname } from "next/navigation"
 
 import Button from "@/components/ui/button"
@@ -34,8 +35,9 @@ const Header = () => {
 			<div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-4 py-2 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
 				<Link
 					href="/"
-					className="inline-flex gap-2 text-[1.05rem] font-extrabold uppercase leading-none tracking-[-0.03em] text-(--foreground)"
+					className="inline-flex items-center gap-2 text-[1.05rem] font-extrabold uppercase leading-none tracking-[-0.03em] text-(--foreground)"
 				>
+					<Logo width={100} height={60} fill="var(--foreground)" />
 					<span>Botsmarks</span>
 					<span className="text-(--accent-yellow)">Mekaniska</span>
 					{/* <Image src="/botsmarks_logo_notext.svg" alt="Botsmarks Mekaniska" width={60} height={60} /> */}

@@ -21,16 +21,16 @@ const ProductShowcase = () => {
 						src="/enbom_skogsvag.png"
 						alt="Enkel Botsmarksbom på en skogsväg"
 						title="Enkelbom"
-						description="Finns i 6 eller 7 meters längd."
-						className="w-[60%] grow"
+						description="Finns i 6 eller 7 meters genomfartsbredd."
+						className="grow"
 						imageHeight="h-full"
 					/>
 					<ImageCard
 						src="/dubblbom.png"
 						alt="Dubbel Botsmarksbom utanför verkstaden, redo för leverans"
 						title="Dubbelbom"
-						description="Finns i 12 eller 14 meters längd."
-						className="w-[60%] grow"
+						description="Finns i 12 eller 14 meters genomfartsbredd."
+						className="grow"
 						imageHeight="h-full"
 					/>
 				</div>
