@@ -6,6 +6,7 @@ const MapPin = ({ width = 16, height = 20, fill, ...props }: SVGProps<SVGSVGElem
     width={width}
     height={height}
     fill="none"
+	viewBox="0 0 14 20"
     {...props}
   >
     <path

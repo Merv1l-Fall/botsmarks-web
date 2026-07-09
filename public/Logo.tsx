@@ -5,7 +5,7 @@ const Logo = ({ width = 61, height = 36, fill, ...props }: SVGProps<SVGSVGElemen
     xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
-    viewBox="0 0 20 36"
+    viewBox="15 0 5 36"
     fill="none"
     {...props}
   >
