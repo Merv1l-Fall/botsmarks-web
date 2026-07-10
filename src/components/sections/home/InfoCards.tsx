@@ -1,17 +1,23 @@
-import Image from "next/image"
-import {CraneIcon} from "../../../../public/CraneIcon"
+"use client";
+
+
+import { CraneIcon } from "../../../../public/CraneIcon";
 const Card = () => {
 	return (
 		<div className="flex flex-col gap-2 bg-(--surface-high) max-w-100 shadow:md p-8 rounded">
 			<div className="w-fit bg-(--surface-higher) p-3 rounded">
-			<CraneIcon fill="var(--accent-yellow)"/>
+				<CraneIcon fill="var(--accent-yellow)" />
 			</div>
 
 			<p className="my-2 text-2xl font-semibold">Svensktillverkat</p>
-			<p className="my-4">Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands Hjärta</p>
+			<p className="my-4">
+				Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands Hjärta
+			</p>
 		</div>
-	)
-}
+	);
+};
+
+
 
 const InfoCards = () => {
 	return (
@@ -20,16 +26,20 @@ const InfoCards = () => {
 				<h2 className="text-(--foreground) text-3xl font-bold text-center">
 					Kvalitet från de Norrländska skogarna
 				</h2>
-				<span className="h-[0.2rem] w-32 bg-(--accent-yellow)"/>
+				<span className="h-[0.2rem] w-32 bg-(--accent-yellow)" />
 			</div>
 
 			<div className="flex flex-col lg:flex-row content-center items-evenly gap-8 my-10 mx-6 max-w-7xl">
-				<Card/>
-				<Card/>
-				<Card/>
+				<Card />
+				<Card />
+				<Card />
+			</div>
+
+			<div className="lg:hidden w-full px-4 flex items-center justify-center">
+				
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default InfoCards
+export default InfoCards;

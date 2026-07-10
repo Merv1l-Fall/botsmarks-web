@@ -3,7 +3,7 @@ import ImageCard from "@/components/ui/ImageCard";
 
 const ProductShowcase = () => {
 	return (
-		<section className="flex flex-col gap-8 p-16 py-24 bg-(--background)">
+		<section className="flex flex-col gap-8 p-8 md:p-16 py-24 bg-(--background)">
 			<div>
 				<h2 className="text-(--foreground) text-3xl font-bold pb-4">Våra Bommar</h2>
 				<div className="flex flex-col gap-6">
@@ -12,11 +12,11 @@ const ProductShowcase = () => {
 						utföranden.
 					</p>
 
-					<Button href="/produkter" variant="primary" className="w-fit">
+					<Button href="/produkter" variant="primary" className="sm:w-fit">
 						Till Produktsidan
 					</Button>
 				</div>
-				<div className="flex lg:flex-row gap-8 mt-8 h-96 sm:flex-col">
+				<div className="flex flex-col lg:flex-row gap-8 mt-8 h-128 lg:h-96">
 					<ImageCard
 						src="/enbom_skogsvag.png"
 						alt="Enkel Botsmarksbom på en skogsväg"

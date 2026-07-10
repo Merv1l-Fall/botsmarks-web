@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Hero = () => {
 	return (
-		<section className="hero-shell flex flex-col min-h-screen items-center gap-10 lg:flex-row lg:gap-16 px-8 py-8 lg:px-16 reveal-up">
+		<section className="hero-shell flex flex-col min-h-screen justify-center xs:justify-start items-center gap-10 lg:flex-row lg:gap-16 px-8 xs:py-8 lg:px-16 reveal-up">
 			<div className="reveal-up space-y-8 max-w-170">
 				<div className="flex items-center gap-3 text-[0.69rem] font-semibold uppercase tracking-widest text-(--accent-yellow)">
 					<span className="h-px w-7 bg-(--accent-yellow)" />
