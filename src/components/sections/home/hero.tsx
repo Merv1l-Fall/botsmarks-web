@@ -3,8 +3,8 @@ import Image from "next/image"
 
 const Hero = () => {
 	return (
-		<section className="hero-shell grid min-h-screen items-center gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16 px-8 lg:px-16">
-			<div className="reveal-up max-w-xl space-y-8">
+		<section className="hero-shell flex flex-col min-h-screen items-center gap-10 lg:flex-row lg:gap-16 px-8 py-8 lg:px-16 reveal-up">
+			<div className="reveal-up space-y-8 max-w-170">
 				<div className="flex items-center gap-3 text-[0.69rem] font-semibold uppercase tracking-widest text-(--accent-yellow)">
 					<span className="h-px w-7 bg-(--accent-yellow)" />
 					BOTSMARKS MEKANISKA AB - BOTSMARK
@@ -21,16 +21,16 @@ const Hero = () => {
 				</p>
 
 				<div className="flex flex-col gap-3 sm:flex-row">
-					<Button href="/kontakt" variant="primary">
+					<Button href="/kontakt" variant="primary" className="w-auto">
 						Begär prisuppgift
 					</Button>
-					<Button href="/produkter" variant="secondary">
+					<Button href="/produkter" variant="secondary" className="w-auto">
 						Se modeller
 					</Button>
 				</div>
 			</div>
 
-			<div className="reveal-up-delay relative mx-auto w-full max-w-170">
+			<div className="reveal-up-delay hidden xs:block relative mx-auto w-full max-w-170">
 				<div className="relative ml-auto w-full rounded bg-[rgba(255,255,255,0.06)] p-4 ring-1 ring-[rgba(255,255,255,0.12)] backdrop-blur-sm md:p-5">
 					<Image
 						src="/botsmarks_first_page.jpg"

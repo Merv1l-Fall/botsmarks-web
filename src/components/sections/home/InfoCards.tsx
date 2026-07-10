@@ -2,7 +2,7 @@ import Image from "next/image"
 import {CraneIcon} from "../../../../public/CraneIcon"
 const Card = () => {
 	return (
-		<div className="flex flex-col gap-2 bg-(--surface-high) shadow:md p-8 rounded">
+		<div className="flex flex-col gap-2 bg-(--surface-high) max-w-100 shadow:md p-8 rounded">
 			<div className="w-fit bg-(--surface-higher) p-3 rounded">
 			<CraneIcon fill="var(--accent-yellow)"/>
 			</div>
@@ -23,7 +23,7 @@ const InfoCards = () => {
 				<span className="h-[0.2rem] w-32 bg-(--accent-yellow)"/>
 			</div>
 
-			<div className="flex items-evenly gap-8 my-10 mx-6 max-w-7xl">
+			<div className="flex flex-col lg:flex-row content-center items-evenly gap-8 my-10 mx-6 max-w-7xl">
 				<Card/>
 				<Card/>
 				<Card/>

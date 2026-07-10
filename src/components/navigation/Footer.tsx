@@ -12,7 +12,7 @@ const Footer = () => {
 	]
 
 	return (
-		<footer className="bg-[rgba(8,10,8,0.92)] flex w-full justify-around p-16 gap-8 flex-wrap">
+		<footer className="bg-[rgba(8,10,8,0.92)] flex flex-col md:flex-row w-full justify-around py-16 px-8 md:p-16 gap-8 flex-wrap">
 			<div className="flex flex-col gap-2 flex-1">
 				<p className="text-lg font-bold uppercase">Botsmarks <em className="text-(--foreground-muted) not-italic">Mekaniska</em></p>
 				<p className="text-(--foreground-muted) max-w-90">
