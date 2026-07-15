@@ -1,9 +1,11 @@
 import Button from "@/components/ui/button";
 import ImageCard from "@/components/ui/ImageCard";
+import SectionContainer from "@/components/layout/SectionContainer";
 
 const ProductShowcase = () => {
 	return (
 		<section className="flex flex-col gap-8 p-8 md:p-16 py-24 bg-(--background)">
+			<SectionContainer>
 			<div>
 				<h2 className="text-(--foreground) text-3xl font-bold pb-4">Våra Bommar</h2>
 				<div className="flex flex-col gap-6">
@@ -35,6 +37,7 @@ const ProductShowcase = () => {
 					/>
 				</div>
 			</div>
+			</SectionContainer>
 		</section>
 	);
 };

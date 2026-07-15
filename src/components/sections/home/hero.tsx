@@ -1,9 +1,11 @@
 import Button from "@/components/ui/button";
 import Image from "next/image"
+import SectionContainer from "@/components/layout/SectionContainer";
 
 const Hero = () => {
 	return (
 		<section className="hero-shell flex flex-col min-h-screen justify-center xs:justify-start items-center gap-10 lg:flex-row lg:gap-16 px-8 xs:py-8 lg:px-16 reveal-up">
+			<SectionContainer className="flex flex-col gap-10 lg:flex-row lg:gap-16 items-center justify-center">
 			<div className="reveal-up space-y-8 max-w-170">
 				<div className="flex items-center gap-3 text-[0.69rem] font-semibold uppercase tracking-widest text-(--accent-yellow)">
 					<span className="h-px w-7 bg-(--accent-yellow)" />
@@ -30,8 +32,8 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className="reveal-up-delay hidden xs:block relative mx-auto w-full max-w-170">
-				<div className="relative ml-auto w-full rounded bg-[rgba(255,255,255,0.06)] p-4 ring-1 ring-[rgba(255,255,255,0.12)] backdrop-blur-sm md:p-5">
+			<div className="reveal-up-delay hidden xs:flex relative w-full max-w-170 justify-center md:justify-right">
+				<div className="relative w-full rounded bg-[rgba(255,255,255,0.06)] p-4 ring-1 ring-[rgba(255,255,255,0.12)] backdrop-blur-sm md:p-5">
 					<Image
 						src="/botsmarks_first_page.jpg"
 						alt="Botsmarks-bommen produktpresentation"
@@ -52,6 +54,7 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
+			</SectionContainer>
 		</section>
 	)
 }
