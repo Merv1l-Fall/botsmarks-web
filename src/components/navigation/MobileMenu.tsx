@@ -14,9 +14,10 @@ type MobileMenuProps = {
 	onClose: () => void
 	navItems: NavItem[]
 	isActive: (href: string) => boolean
+	openModal: () => void
 }
 
-const MobileMenu = ({ open, onClose, navItems, isActive }: MobileMenuProps) => {
+const MobileMenu = ({ open, onClose, navItems, isActive, openModal }: MobileMenuProps) => {
 	return (
 		<div
 			id="mobile-header-menu"
@@ -38,8 +39,15 @@ const MobileMenu = ({ open, onClose, navItems, isActive }: MobileMenuProps) => {
 							>
 								{item.label}
 							</Link>
+							
 						)
 					})}
+					<button
+					className="rounded border px-4 py-3 transition border-(--outline) hover:border-(--outline-strong) hover:text-(--foreground) text-[0.9rem] font-semibold uppercase tracking-widest text-(--foreground-muted) flex"
+						onClick={openModal}
+					>
+						Broschyr
+					</button>
 				</nav>
 
 				<Button href="/kontakt" variant="primary" className="w-full" onClick={onClose}>

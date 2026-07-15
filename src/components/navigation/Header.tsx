@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation"
 
 import Button from "@/components/ui/button"
 import MobileMenu from "@/components/navigation/MobileMenu"
+import ModalWrapper from "@/components/layout/ModalWrapper"
+import BrochyrWrapper from "@/components/ui/BrochyrWrapper"
 
 type NavItem = {
 	href: string;
@@ -16,13 +18,14 @@ type NavItem = {
 const navItems: NavItem[] = [
 	{ href: "/", label: "Hem" },
 	{ href: "/produkter", label: "Produkter" },
-	{ href: "/broschyr", label: "Broschyr" },
+	// { href: "/broschyr", label: "Broschyr" },
 	{ href: "/kontakt", label: "Kontakt" },
 ]
 
 const Header = () => {
 	const pathname = usePathname()
 	const [menuOpen, setMenuOpen] = useState(false)
+	const [modalOpen, setModalOpen] = useState(false)
 
 	const isActive = (href: string) => {
 		if (href === "/") {
@@ -30,6 +33,10 @@ const Header = () => {
 		}
 
 		return pathname === href || pathname.startsWith(`${href}/`)
+	}
+
+	const openModal = () => {
+		setModalOpen(true)
 	}
 
 	return (
@@ -61,6 +68,12 @@ const Header = () => {
 							</Link>
 						)
 					})}
+					<button
+					className="relative transition-colors hover:text-(--foreground) cursor-pointer uppercase tracking-[0.12em] text-[0.8rem] font-semibold text-(--foreground-muted)"
+						onClick={openModal}
+					>
+						Broschyr
+					</button>
 				</nav>
 
 				<div className="hidden min-[820px]:block">
@@ -88,7 +101,13 @@ const Header = () => {
 				</button>
 			</div>
 
-			<MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} navItems={navItems} isActive={isActive} />
+			<MobileMenu openModal={openModal} open={menuOpen} onClose={() => setMenuOpen(false)} navItems={navItems} isActive={isActive} />
+			{modalOpen ? (
+				<ModalWrapper onClose={() => setModalOpen(false)}>
+					<BrochyrWrapper/>
+				</ModalWrapper>
+			) : null}
+			
 		</header>
 	)
 }
