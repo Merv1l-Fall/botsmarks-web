@@ -9,11 +9,11 @@ const ProductsMoreInfo = () => {
 				<p className="text-center text-(--accent-yellow) text-lg font-semibold">
 					Funderar du på lås eller montering?
 				</p>
-				<h2 className="text-4xl font-bold text-(--foreground) text-center">Tekniska Detaljer</h2>
+				<h2 className="text-5xl font-bold text-(--foreground) text-center">Tekniska Detaljer</h2>
 			</div>
 
-			<div className="flex flex-col gap-8 md:flex-row md:gap-32">
-				<div className="flex flex-col gap-4 w-100 bg-black/20 rounded-md shadow-md">
+			<div className="flex flex-col gap-8 lg:flex-row md:gap-32">
+				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
 						src="/robust_fundament.jpg"
 						alt="Robust fundament i betong för Botsmarks-bom"
@@ -29,7 +29,7 @@ const ProductsMoreInfo = () => {
 
 					</div>
 				</div>
-				<div className="flex flex-col gap-4 w-100 bg-black/20 rounded-md shadow-md">
+				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
 						src="/lasning.png"
 						alt="Olika låsningslösningar för Botsmarks-bom, samt en bild av bommens motvikt i uppfällt läge"
