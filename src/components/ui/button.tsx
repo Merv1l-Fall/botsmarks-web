@@ -12,7 +12,7 @@ type ButtonElementProps = ButtonBaseProps & React.ButtonHTMLAttributes<HTMLButto
 
 type LinkElementProps = ButtonBaseProps &
 	Omit<React.ComponentProps<typeof Link>, "href" | "children" | "className"> & {
-		href: NonNullable<React.ComponentProps<typeof Link>["href"]>;
+		href: React.ComponentProps<typeof Link>["href"];
 	};
 
 type ButtonProps = ButtonElementProps | LinkElementProps;
@@ -26,11 +26,11 @@ const sharedClasses = (className?: string) =>
 	`inline-flex h-12 items-center justify-center rounded px-7 text-[0.84rem] font-bold uppercase tracking-[0.08em] transition whitespace-nowrap ${className ?? ""}`;
 
 const Button = (props: ButtonProps) => {
-	const { children, variant, className } = props;
+	const { children, variant, className, ...restProps } = props;
 	const classes = `${sharedClasses(className)} ${buttonStyles[variant]}`;
 
-	if ("href" in props && props.href !== undefined) {
-		const { href, ...anchorProps } = props;
+	if ("href" in restProps && restProps.href !== undefined) {
+		const { href, ...anchorProps } = restProps;
 
 		return (
 			<Link href={href} className={classes} {...anchorProps}>
@@ -39,7 +39,7 @@ const Button = (props: ButtonProps) => {
 		);
 	}
 
-	const { type = "button", ...buttonProps } = props;
+	const { type = "button", ...buttonProps } = restProps;
 
 	return (
 		<button type={type} className={classes} {...buttonProps}>
