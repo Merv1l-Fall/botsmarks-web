@@ -29,7 +29,7 @@ const Button = (props: ButtonProps) => {
 	const { children, variant, className, ...restProps } = props;
 	const classes = `${sharedClasses(className)} ${buttonStyles[variant]}`;
 
-	if ("href" in restProps) {
+	if ("href" in restProps && restProps.href !== undefined) {
 		const { href, ...anchorProps } = restProps;
 
 		return (
