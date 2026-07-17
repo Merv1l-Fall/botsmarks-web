@@ -40,7 +40,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className="relative z-20 w-full bg-[rgba(8,10,8,0.92)] backdrop-blur-sm">
+		<header className=" z-20 w-full bg-[rgba(8,10,8,0.92)] backdrop-blur-sm sticky top-0 left-0 right-0 border-b border-(--outline)">
 			<div className="mx-auto flex max-w-7xl flex-row items-center gap-4 px-4 py-2 md:flex-row md:items-center justify-between md:px-6 lg:px-8">
 				<Link
 					href="/"
@@ -104,7 +104,7 @@ const Header = () => {
 			<MobileMenu openModal={openModal} open={menuOpen} onClose={() => setMenuOpen(false)} navItems={navItems} isActive={isActive} />
 			{modalOpen ? (
 				<ModalWrapper onClose={() => setModalOpen(false)}>
-					<BrochyrWrapper/>
+					<BrochyrWrapper onClose={() => setModalOpen(false)} />
 				</ModalWrapper>
 			) : null}
 			

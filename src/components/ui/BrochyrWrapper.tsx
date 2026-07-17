@@ -1,9 +1,11 @@
 import Image from "next/image"
 import Button from "./button"
 
+type BrochyrWrapperProps = {
+	onClose: () => void
+}
 
-
-const BrochyrWrapper = () => {
+const BrochyrWrapper = ({ onClose }: BrochyrWrapperProps) => {
 	return(
 		<div className ="flex flex-col gap-6 p-8 md:p-16 py-8 rounded-md items-center justify-center bg-(--surface-higher)">
 			<Image src="/botsmarks_first_page.jpg" alt="Broschyr" width={600} height={600} className="rounded-lg" />
@@ -20,6 +22,10 @@ const BrochyrWrapper = () => {
 
 			</Button>
 			</a>
+			<Button variant="secondary" className="w-full" onClick={onClose}>
+				Stäng
+
+			</Button>
 			</div>
 		</div>
 	)

@@ -2,7 +2,7 @@ import SectionContainer from "@/components/layout/SectionContainer";
 
 const ProductsHero = () => {
 	return (
-		<section className="relative flex flex-col  py-16 px-8 md:p-16 bg-(--background)">
+		<section className="relative flex flex-col  py-8 px-8 md:px-16 bg-(--background)">
 			<SectionContainer>
 				<div className="flex items-center gap-3 text-[0.69rem] font-semibold uppercase tracking-widest text-(--accent-yellow)">
 					<span className="h-px w-7 bg-(--accent-yellow)" />
