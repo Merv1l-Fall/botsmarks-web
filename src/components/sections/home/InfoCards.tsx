@@ -1,17 +1,41 @@
 "use client";
 
 
+import CheckIcon from "../../../../public/CheckIcon";
 import { CraneIcon } from "../../../../public/CraneIcon";
-const Card = () => {
+import WrenchIcon from "../../../../public/WrenchIcon";
+
+const cardData = [
+	
+	{
+		heading: "Svensktillverkat",
+		description:
+			"Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands Hjärta",
+		icon: <CraneIcon fill="var(--accent-yellow)" />,
+	},
+	{
+		heading: "Norrlänsk kvalitet",
+		description:
+			"Vi använder endast de bästa materialen och komponenterna för att säkerställa att våra produkter håller högsta kvalitet.",
+		icon: <CheckIcon fill="var(--accent-yellow)" />,
+	},
+	{
+		heading: "Enkel installation",
+		description:
+			"Våra produkter är designade för att vara enkla att installera och använda, vilket sparar tid och pengar för våra kunder.",
+		icon: <WrenchIcon fill="var(--accent-yellow)" />,
+	}
+]
+const Card = ({ heading, description, icon }: any) => {
 	return (
 		<div className="flex flex-col gap-2 bg-(--surface-high) max-w-100 shadow:md p-8 rounded">
 			<div className="w-fit bg-(--surface-higher) p-3 rounded">
-				<CraneIcon fill="var(--accent-yellow)" />
+				{icon}
 			</div>
 
-			<p className="my-2 text-2xl font-semibold">Svensktillverkat</p>
+			<p className="my-2 text-2xl font-semibold">{heading}</p>
 			<p className="my-4">
-				Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands Hjärta
+				{description}
 			</p>
 		</div>
 	);
@@ -30,9 +54,9 @@ const InfoCards = () => {
 			</div>
 
 			<div className="flex flex-col lg:flex-row content-center items-evenly gap-8 my-10 mx-6 max-w-7xl">
-				<Card />
-				<Card />
-				<Card />
+				{cardData.map((card, index) => (
+					<Card key={index} {...card} />
+				))}
 			</div>
 
 			<div className="lg:hidden w-full px-4 flex items-center justify-center">
