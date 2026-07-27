@@ -10,7 +10,7 @@ const cardData = [
 	{
 		heading: "Svensktillverkat",
 		description:
-			"Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands Hjärta",
+			"Varje bom svetsas och monterasa med precision i vår verkstad i Botsmark, mitt i Norrlands hjärta.",
 		icon: <CraneIcon fill="var(--accent-yellow)" />,
 	},
 	{
