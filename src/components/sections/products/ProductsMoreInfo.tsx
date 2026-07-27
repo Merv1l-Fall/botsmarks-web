@@ -27,7 +27,7 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 			<div className="flex flex-col gap-8 lg:flex-row md:gap-32">
 				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
-						src={firstCard?.imageUrl ?? "/robust_fundament.jpg"}
+						src="/robust_fundament.jpg"
 						alt={firstCard?.heading ?? "Robust fundament i betong för Botsmarks-bom"}
 						width={440}
 						height={480}
@@ -43,7 +43,7 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 				</div>
 				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
-						src={secondCard?.imageUrl ?? "/lasning.png"}
+						src="/lasning.png"
 						alt={secondCard?.heading ?? "Olika låsningslösningar för Botsmarks-bom, samt en bild av bommens motvikt i uppfällt läge"}
 						width={440}
 						height={480}
