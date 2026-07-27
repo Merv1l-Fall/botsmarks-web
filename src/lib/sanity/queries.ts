@@ -1,6 +1,63 @@
 import {groq} from 'next-sanity';
 import {client} from './client';
 
+export interface SanityProductSummary {
+	_id: string;
+	heading: string;
+	slug?: {
+		current?: string;
+	};
+	description: string;
+	length: string;
+	imageUrl?: string | null;
+	order?: number | null;
+}
+
+export interface HomePageData {
+	hero?: {
+		badgeText?: string;
+		headingPre?: string;
+		headingEmphasis?: string;
+		headingPost?: string;
+		subtext?: string;
+		primaryButtonText?: string;
+		secondaryButtonText?: string;
+		imageBadgeLabel?: string;
+		imageBadgeText?: string;
+	};
+	infoCardsSectionHeading?: string;
+	infoCards?: {
+		heading: string;
+		description: string;
+		icon?: string;
+	}[];
+	productShowcase?: {
+		heading?: string;
+		description?: string;
+		buttonText?: string;
+		featuredProducts?: SanityProductSummary[];
+	};
+}
+
+export interface ProductsPageData {
+	hero?: {
+		badgeText?: string;
+		headingPre?: string;
+		headingEmphasis?: string;
+		subtext?: string;
+	};
+	products?: SanityProductSummary[];
+	moreInfoSection?: {
+		eyebrow?: string;
+		heading?: string;
+		cards?: {
+			imageUrl?: string | null;
+			heading: string;
+			description: string;
+		}[];
+	};
+}
+
 export async function getProductsPage() {
 	const query = groq`*[_type == "productsPage"][0]{
 		hero{
@@ -15,14 +72,14 @@ export async function getProductsPage() {
 			slug,
 			description,
 			length,
-			image,
+			"imageUrl": image.asset->url,
 			order
 		},
 		moreInfoSection{
 			eyebrow,
 			heading,
 			cards[]{
-				image,
+				"imageUrl": image.asset->url,
 				heading,
 				description
 			}
@@ -61,7 +118,7 @@ export async function getHomePage() {
 				slug,
 				description,
 				length,
-				image,
+				"imageUrl": image.asset->url,
 				order
 			}
 		}
@@ -90,7 +147,7 @@ export interface SiteSettings {
   };
   defaultSeo: {
     // shape depends on your seo schema
-    [key: string]: any;
+		[key: string]: unknown;
   };
 }
 

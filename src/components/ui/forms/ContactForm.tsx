@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import FormField from './FormField';
@@ -21,8 +21,12 @@ export type ContactFormData = {
 	consent: boolean;
 };
 
+type SubmitStatus = 'idle' | 'success' | 'error';
+
 const ContactForm: FC<ContactFormProps> = ({ messages, onSubmit, isLoading = false }) => {
 	const validationSchema = createContactFormSchema(messages);
+	const [status, setStatus] = useState<SubmitStatus>('idle');
+	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
 	const {
 		register,
@@ -41,9 +45,20 @@ const ContactForm: FC<ContactFormProps> = ({ messages, onSubmit, isLoading = fal
 	});
 
 	const handleFormSubmit = async (data: ContactFormData) => {
-		if (onSubmit) {
+		if (!onSubmit) return;
+
+		setStatus('idle');
+		setErrorMessage(null);
+
+		try {
 			await onSubmit(data);
+			setStatus('success');
 			reset();
+		} catch (err) {
+			setStatus('error');
+			setErrorMessage(
+				err instanceof Error ? err.message : messages.forms.status?.errorFallback ?? 'Something went wrong.'
+			);
 		}
 	};
 
@@ -89,6 +104,18 @@ const ContactForm: FC<ContactFormProps> = ({ messages, onSubmit, isLoading = fal
 			>
 				{isLoading ? messages.forms.buttons.contactLoading : messages.forms.buttons.contact}
 			</button>
+
+			{status === 'success' && (
+				<p role="status" className="text-sm font-medium text-green-600">
+					{messages.forms.status?.success ?? 'Thanks — your message has been sent.'}
+				</p>
+			)}
+
+			{status === 'error' && (
+				<p role="alert" className="text-sm font-medium text-red-600">
+					{errorMessage}
+				</p>
+			)}
 		</form>
 	);
 };
