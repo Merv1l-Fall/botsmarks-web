@@ -19,9 +19,6 @@ const ProductCard = ({ heading, description, length, image }: ProductCardProps) 
 					height={900}
 					className="h-auto w-full object-cover"
 				/>
-				<div className="absolute left-4 top-4 inline-flex h-8 items-center rounded-xs bg-(--barrier-red) px-3 text-[0.69rem] font-medium uppercase tracking-[0.08em] text-white">
-					Klassiker
-				</div>
 			</div>
 
 			<div className="flex flex-1 flex-col gap-7 px-6 py-8 md:px-8 md:py-10 justify-between">

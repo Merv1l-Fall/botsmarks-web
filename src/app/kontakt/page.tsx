@@ -6,6 +6,10 @@ import type { ValidationMessages } from "@/components/ui/forms/validationSchema"
 
 const contactFormMessages: ValidationMessages = {
 	forms: {
+		status: {
+			success: "Meddelandet har skickats!",
+			error: "Ett fel uppstod när meddelandet skulle skickas. försök igen senare.",
+		},
 		labels: {
 			companyName: "Företagsnamn",
 			name: "Namn",
@@ -70,12 +74,22 @@ const contactFormMessages: ValidationMessages = {
 
 const ContactPage = () => {
 	const handleContactSubmit = async (data: ContactFormData) => {
-		const subject = encodeURIComponent(`Kontaktförfrågan från ${data.name}`);
-		const body = encodeURIComponent(
-			`Namn: ${data.name}\nE-post: ${data.email}\n\nMeddelande:\n${data.message}`,
-		);
+		const res = await fetch("https://api.web3forms.com/submit", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify({
+				access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+				name: data.name,
+				email: data.email,
+				message: data.message,
+			}),
+		});
 
-		window.location.href = `mailto:info@botsmarksmekaniska.se?subject=${subject}&body=${body}`;
+		const result = await res.json();
+
+		if (!result.success) {
+			throw new Error(result.message ?? "Submission failed");
+		}
 	};
 
 	return (
@@ -97,7 +111,7 @@ const ContactPage = () => {
 				</SectionContainer>
 			</section>
 
-			
+
 
 			<section className="pb-16 md:pb-24">
 				<SectionContainer>
@@ -107,9 +121,6 @@ const ContactPage = () => {
 						</div>
 
 						<aside className="rounded-2xl bg-(--background) p-8">
-							<p className="text-[0.69rem] font-semibold uppercase tracking-widest text-(--accent-yellow)">
-								Alternative
-							</p>
 							<h2 className="mt-3 text-2xl font-bold tracking-[-0.02em] text-(--foreground)">
 								Kontaktuppgifter
 							</h2>
@@ -129,7 +140,7 @@ const ContactPage = () => {
 									href="https://maps.app.goo.gl/XKZ5cumkaWJpASJMA"
 									target="_blank"
 									rel="noreferrer"
-									>
+								>
 									Botulfsvägen 24, 92276 Botsmark
 								</a>
 							</div>
@@ -139,7 +150,7 @@ const ContactPage = () => {
 			</section>
 		</main>
 	);
-								
+
 };
 
 export default ContactPage;

@@ -3,6 +3,7 @@ import type { ContactFormData } from "./ContactForm";
 
 export type ValidationMessages = {
 	forms: {
+		status: any;
 		labels: {
 			companyName: string;
 			name: string;
