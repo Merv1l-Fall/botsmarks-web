@@ -45,7 +45,7 @@ const ProductCard = ({ heading, description, length, image }: ProductCardProps) 
 							<dt className="text-[0.96rem] font-semibold tracking-[0.08em] text-[rgba(227,226,224,0.42)]">
 								Material
 							</dt>
-							<dd className="text-[0.95rem] font-semibold text-(--foreground)">Rostskyddat Stål</dd>
+							<dd className="text-[0.95rem] font-semibold text-(--foreground)">Stål</dd>
 						</div>
 						<div className="grid grid-cols-[1fr_auto] items-center gap-4">
 							<dt className="text-[0.96rem] font-semibold tracking-[0.08em] text-[rgba(227,226,224,0.42)]">
