@@ -17,7 +17,7 @@ const ProductCard = ({ heading, description, length, image }: ProductCardProps) 
 					alt={heading}
 					width={1200}
 					height={900}
-					className="h-auto w-full object-cover"
+					className="object-cover"
 				/>
 			</div>
 

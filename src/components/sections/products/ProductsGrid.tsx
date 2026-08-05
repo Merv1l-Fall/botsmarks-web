@@ -21,7 +21,7 @@ const ProductsGrid = ({ products }: ProductsGridProps) => {
 						heading={firstProduct?.heading ?? "Enkelbom"}
 						description={firstProduct?.description ?? "Robust och driftsäker vägboom för skogsbilvägar och enskilda vägar. Robust konstruktion för att klara tuffa miljöer och påfrestningar. Lämplig för både privat och kommersiellt bruk."}
 						length={firstProduct?.length ?? "6 eller 7 meter"}
-						image={firstProduct?.imageUrl ?? "/enbom_skogsvag.png"}
+						image={firstProduct?.imageUrl ?? "/enkelbom.jpg"}
 					/>
 					<ProductCard
 						heading={secondProduct?.heading ?? "Dubbelbom"}
