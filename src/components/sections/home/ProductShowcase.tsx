@@ -32,7 +32,7 @@ const ProductShowcase = ({ productShowcase }: ProductShowcaseProps) => {
 				</div>
 				<div className="flex flex-col lg:flex-row gap-8 mt-8 h-128 lg:h-96">
 					<ImageCard
-						src={firstProduct?.imageUrl ?? "/enbom_skogsvag.png"}
+						src="/enkelbom.jpg"
 						alt={firstProduct?.heading ?? "Enkel Botsmarksbom på en skogsväg"}
 						title={firstProduct?.heading ?? "Enkelbom"}
 						description={firstProduct?.description ?? "Finns i 6 eller 7 meters genomfartsbredd."}
@@ -40,7 +40,7 @@ const ProductShowcase = ({ productShowcase }: ProductShowcaseProps) => {
 						imageHeight="h-full"
 					/>
 					<ImageCard
-						src={secondProduct?.imageUrl ?? "/dubblbom.png"}
+						src="/dubblbom.png"
 						alt={secondProduct?.heading ?? "Dubbel Botsmarksbom utanför verkstaden, redo för leverans"}
 						title={secondProduct?.heading ?? "Dubbelbom"}
 						description={secondProduct?.description ?? "Finns i 12 eller 14 meters genomfartsbredd."}
