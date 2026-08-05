@@ -25,13 +25,13 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 			</div>
 
 			<div className="flex flex-col gap-8 lg:flex-row md:gap-32">
-				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
+				<div className="flex flex-col gap-4 w-full max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
 						src="/robust_fundament.jpg"
 						alt={firstCard?.heading ?? "Robust fundament i betong för Botsmarks-bom"}
 						width={440}
 						height={480}
-						className="rounded-lg object-cover h-80"
+						className="h-80 w-full rounded-lg object-cover"
 					/>
 					<div className="p-4">
 					<h3 className="text-lg font-semibold text-(--foreground)">{firstCard?.heading ?? "Robust Fundament"}</h3>
@@ -41,13 +41,13 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 
 					</div>
 				</div>
-				<div className="flex flex-col gap-4 max-w-100 bg-black/20 rounded-md shadow-md">
+				<div className="flex flex-col gap-4 w-full max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
 						src="/lasning.png"
 						alt={secondCard?.heading ?? "Olika låsningslösningar för Botsmarks-bom, samt en bild av bommens motvikt i uppfällt läge"}
 						width={440}
 						height={480}
-						className="rounded-lg object-cover h-80"
+						className="h-80 w-full rounded-lg object-cover"
 					/>
 					<div className="p-4">
 						<h3 className="text-lg font-semibold text-(--foreground)">{secondCard?.heading ?? "Låsningslösningar"}</h3>

@@ -11,12 +11,12 @@ type ProductCardProps = {
 const ProductCard = ({ heading, description, length, image }: ProductCardProps) => {
 	return (
 		<article className="overflow-hidden rounded-lg bg-(--surface-high) text-(--foreground) shadow-md h-full flex flex-col">
-			<div className="relative">
+			<div className="relative aspect-848/554 w-full overflow-hidden">
 				<Image
 					src={image}
 					alt={heading}
-					width={1200}
-					height={900}
+					fill
+					sizes="(min-width: 1024px) 50vw, 100vw"
 					className="object-cover"
 				/>
 			</div>
