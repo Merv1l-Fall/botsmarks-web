@@ -23,7 +23,7 @@ const buttonStyles = {
 };
 
 const sharedClasses = (className?: string) =>
-	`inline-flex h-12 items-center justify-center rounded px-7 text-[0.84rem] font-bold uppercase tracking-[0.08em] transition whitespace-nowrap ${className ?? ""}`;
+	`inline-flex min-h-12 items-center justify-center rounded px-4 py-3 text-center text-[0.76rem] font-bold uppercase tracking-[0.08em] leading-tight transition whitespace-normal break-words max-w-full sm:px-7 sm:text-[0.84rem] sm:whitespace-nowrap ${className ?? ""}`;
 
 const Button = (props: ButtonProps) => {
 	const { children, variant, className, ...restProps } = props;
