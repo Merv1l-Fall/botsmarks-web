@@ -43,7 +43,7 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 				</div>
 				<div className="flex flex-col gap-4 w-full max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
-						src="/lasning.png"
+						src="/dubbelbom_lasning.jpg"
 						alt={secondCard?.heading ?? "Olika låsningslösningar för Botsmarks-bom, samt en bild av bommens motvikt i uppfällt läge"}
 						width={440}
 						height={480}
