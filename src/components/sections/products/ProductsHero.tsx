@@ -19,7 +19,7 @@ const ProductsHero = ({ hero }: ProductsHeroProps) => {
 					<span className="h-px w-7 bg-(--accent-yellow)" />
 					{badgeText}
 				</div>
-				<h1 className="text-balance mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.02em] text-(--foreground) sm:text-[2.35rem] lg:text-[3.05rem]">{headingPre}<em className="font-semibold italic text-[#c8d7c9]">{headingEmphasis}</em></h1>
+				<h1 className="text-balance mt-4 text-[2rem] font-bold leading-[1.2] tracking-[-0.02em] text-(--foreground) sm:text-[2.35rem] lg:text-[3.05rem]"> {headingPre}  <em className="font-semibold italic text-[#c8d7c9]">{headingEmphasis}</em></h1>
 
 				<p className="max-w-3xl text-[1rem] leading-[1.65] text-(--foreground-muted) py-4">
 					{subtext}
