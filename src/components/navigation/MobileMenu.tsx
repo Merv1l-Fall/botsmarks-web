@@ -18,6 +18,8 @@ type MobileMenuProps = {
 }
 
 const MobileMenu = ({ open, onClose, navItems, isActive, openModal }: MobileMenuProps) => {
+
+
 	return (
 		<div
 			id="mobile-header-menu"
