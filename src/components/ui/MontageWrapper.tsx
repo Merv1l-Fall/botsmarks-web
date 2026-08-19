@@ -3,7 +3,6 @@ import Button from "./button"
 type MontageWrapperProps = {
 	onClose: () => void
 }
-//TODO finish this and add it in to the footer as a modal, also test the links to make sure they work
 const MontageWrapper = ({ onClose }: MontageWrapperProps) => {
 	return (
 		<div className="flex flex-col gap-6 p-8 md:p-16 py-8 rounded-md items-center justify-center bg-(--surface-higher)">
