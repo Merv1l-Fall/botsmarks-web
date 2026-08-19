@@ -43,8 +43,8 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 				</div>
 				<div className="flex flex-col gap-4 w-full max-w-100 bg-black/20 rounded-md shadow-md">
 					<Image
-						src="/dubbelbom_lasning.jpg"
-						alt={secondCard?.heading ?? "Olika låsningslösningar för Botsmarks-bom, samt en bild av bommens motvikt i uppfällt läge"}
+						src="/lasning_2.webp"
+						alt={secondCard?.heading ?? "Olika låsningslösningar för Botsmarks-bom"}
 						width={440}
 						height={480}
 						className="h-80 w-full rounded-lg object-cover"
@@ -52,7 +52,7 @@ const ProductsMoreInfo = ({ moreInfoSection }: ProductsMoreInfoProps) => {
 					<div className="p-4">
 						<h3 className="text-lg font-semibold text-(--foreground)">{secondCard?.heading ?? "Låsningslösningar"}</h3>
 						<p>
-							{secondCard?.description ?? "Systemet använder högkvalitativa låsanordningar i stål anpassade för hänglås. Vi erbjuder även versioner med plats för dubbla lås för delad åtkomst, samt detaljerade lösningar för stolpen i öppet läge."}
+							{secondCard?.description ?? "Systemet använder högkvalitativa låsanordningar i stål anpassade för hänglås. Vi erbjuder även versioner med plats för dubbla lås för delad åtkomst."}
 						</p>
 					</div>
 				</div>
