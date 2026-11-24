@@ -10,7 +10,7 @@ type ProductCardProps = {
 
 const ProductCard = ({ heading, description, length, image }: ProductCardProps) => {
 	return (
-		<article className="overflow-hidden rounded-lg bg-(--surface-high) text-(--foreground) shadow-md h-full flex flex-col">
+		<article className="overflow-hidden rounded-lg bg-(--surface-high) text-(--foreground) shadow-md h-full flex flex-col lg:flex-1 lg:max-w-160">
 			<div className="relative aspect-848/554 w-full overflow-hidden">
 				<Image
 					src={image}
