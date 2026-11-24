@@ -106,7 +106,7 @@ const ContactPage = () => {
 						Kontakta oss
 					</h1>
 					<p className="max-w-2xl text-[1rem] leading-[1.65] text-(--foreground-muted) lg:text-[1.05rem]">
-						eller ring om du hellra pratar än skriver
+						eller ring om du hellre pratar än skriver
 					</p>
 				</SectionContainer>
 			</section>
